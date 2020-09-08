@@ -8,12 +8,10 @@ const jwt = require("jsonwebtoken");
 const moment = require("moment");
 const mongoose = require("mongoose");
 const shortid = require("shortid");
-const validator = require("validator");
 
 const { isEmpty } = require("../utils");
 const { secretOrKey } = require("../config/keys");
 const { trip_type_charges, vehicle_type_charges } = require("../constants");
-const vechicle = require("../models/vechicle");
 
 const parseJSON = (val) => JSON.parse(JSON.stringify(val));
 
