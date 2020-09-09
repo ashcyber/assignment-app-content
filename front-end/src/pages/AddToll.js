@@ -46,7 +46,7 @@ export default function AddToll() {
   return (
     <Container fixed>
       <Box className={classes.titleBox}>
-        <Typography variant="h4">Add Toll Both</Typography>
+        <Typography variant="h4">Add Toll Booth</Typography>
       </Box>
       <Box className={classes.btn_container}>
         <TextField

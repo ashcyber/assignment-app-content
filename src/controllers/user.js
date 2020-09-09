@@ -112,7 +112,7 @@ exports.addVehicle = async (req, res) => {
 exports.issueReceipt = async (req, res) => {
   try {
     if (
-      isEmpty(req.body.toll_both_id) ||
+      isEmpty(req.body.toll_booth_id) ||
       isEmpty(req.body.vehicle_id) ||
       isEmpty(req.body.type)
     ) {
@@ -131,7 +131,7 @@ exports.issueReceipt = async (req, res) => {
     const newReceipt = new Receipt({
       receipt_display_id: shortid.generate(),
       user_id: req.user._id,
-      toll_both_id: req.body.toll_both_id,
+      toll_booth_id: req.body.toll_booth_id,
       vehicle_id: req.body.vehicle_id,
       type: req.body.type,
       trip_type_charge: trip_type_charges[req.body.type],

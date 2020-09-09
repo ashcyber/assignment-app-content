@@ -17,7 +17,7 @@ export default function CheckInToll() {
   const classes = useStyles();
   const history = useHistory();
   const [state, setState] = React.useState({
-    toll_both_id: "",
+    toll_booth_id: "",
     vehicle_id: "",
     type: "",
   });
@@ -73,10 +73,10 @@ export default function CheckInToll() {
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel>Select Toll</InputLabel>
             <Select
-              value={state.toll_both_id}
+              value={state.toll_booth_id}
               onChange={handleChange}
               label="Select Toll"
-              name="toll_both_id"
+              name="toll_booth_id"
             >
               <MenuItem value="">
                 <em>None</em>

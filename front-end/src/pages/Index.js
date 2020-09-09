@@ -40,7 +40,7 @@ export default function Index(props) {
             startIcon={<Dashboard />}
             onClick={() => history.push("/toll-add")}
           >
-            Add Toll Both
+            Add Toll Booth
           </Button>
         </Box>
       </Container>

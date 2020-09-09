@@ -7,7 +7,7 @@ const receiptSchema = new mongoose.Schema(
     receipt_display_id: {
       type: String,
     },
-    toll_both_id: {
+    toll_booth_id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "TollBooth",
     },

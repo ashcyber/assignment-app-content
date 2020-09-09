@@ -33,9 +33,9 @@ exports.checkHistory = async (req, res) => {
     {
       $lookup: {
         from: "tollbooths",
-        localField: "toll_both_id",
+        localField: "toll_booth_id",
         foreignField: "_id",
-        as: "toll_both_data",
+        as: "toll_booth_data",
       },
     },
     { $sort: { created_at: 1 } },
@@ -46,7 +46,7 @@ exports.checkHistory = async (req, res) => {
         created_at: 1,
         type: 1,
         total: 1,
-        toll_both_data: { $arrayElemAt: ["$toll_both_data", 0] },
+        toll_booth_data: { $arrayElemAt: ["$toll_booth_data", 0] },
         user_data: { $arrayElemAt: ["$user_data", 0] },
         vehicle_data: { $arrayElemAt: ["$vehicle_data", 0] },
       },

@@ -13,7 +13,7 @@ const TollBooth = require("../models/tollBooth");
 const Receipt = require("../models/receipt");
 
 const user_id = mongoose.Types.ObjectId("5f57a821518d6346ec8be87b");
-const toll_both_id = mongoose.Types.ObjectId("5f57a22fb4c3cb3cb7cde728");
+const toll_booth_id = mongoose.Types.ObjectId("5f57a22fb4c3cb3cb7cde728");
 const vehicle_id = mongoose.Types.ObjectId("5f57a2ceb4c3cb3cb7cde72b");
 const receipt_id = mongoose.Types.ObjectId("5f57a7f40be441467bceeefe");
 
@@ -64,7 +64,7 @@ describe("User Routes", () => {
         await Receipt.create({
           _id: receipt_id,
           receipt_display_id: "testReceiptNumber",
-          toll_both_id,
+          toll_booth_id,
           vehicle_id,
           user_id,
           type: "round",
@@ -82,7 +82,7 @@ describe("User Routes", () => {
         });
 
         await TollBooth.create({
-          _id: toll_both_id,
+          _id: toll_booth_id,
           name: "test_booth_name",
           location: "test_location",
         });
@@ -162,7 +162,7 @@ describe("User Routes", () => {
       .post("/api/user/issue-receipt")
       .set({ Authorization: `Bearer ${JWT_TOKEN}` })
       .send({
-        toll_both_id: toll_both_id,
+        toll_booth_id: toll_booth_id,
         vehicle_id: vehicle_id,
         type: "one_way",
       })

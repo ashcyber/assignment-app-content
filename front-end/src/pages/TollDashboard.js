@@ -65,10 +65,10 @@ export default function TollDashboard() {
                     {index}
                   </TableCell>
                   <TableCell component="th" scope="row">
-                    {row.toll_both_data.name}
+                    {row.toll_booth_data.name}
                   </TableCell>
                   <TableCell align="right">
-                    {row.toll_both_data.location}
+                    {row.toll_booth_data.location}
                   </TableCell>
                   <TableCell align="right">{row.type}</TableCell>
                   <TableCell align="right">
