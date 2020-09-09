@@ -5,7 +5,7 @@ const shortid = require("shortid");
 
 exports.createToll = async (req, res) => {
   const toll = await TollBooth.create({
-    display_id: shortid.generate(),
+    tollboth_display_id: shortid.generate(),
     name: req.body.name,
     location: req.body.location,
   });
