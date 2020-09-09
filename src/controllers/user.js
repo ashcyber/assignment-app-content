@@ -1,7 +1,7 @@
 const User = require("../models/user");
 const Vehicle = require("../models/vechicle");
 const Receipt = require("../models/receipt");
-const TollBoth = require("../models/tollBoth");
+const TollBooth = require("../models/tollBooth");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -205,6 +205,6 @@ exports.getAllVehicles = async (req, res) => {
 };
 
 exports.getAllTolls = async (req, res) => {
-  const tolls = await TollBoth.find({});
+  const tolls = await TollBooth.find({});
   res.json(tolls);
 };

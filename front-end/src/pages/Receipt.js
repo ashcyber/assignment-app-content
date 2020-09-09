@@ -18,7 +18,7 @@ const textMap = {
 export default function Receipt() {
   const history = useHistory();
   const classes = useStyles();
-  const reciptClasses = useStylesReceipt();
+  const receiptClasses = useStylesReceipt();
   const [state, setState] = React.useState({});
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ export default function Receipt() {
   return (
     <Container fixed>
       <Box className={classes.btn_container}>
-        <Paper className={reciptClasses.paper}>
+        <Paper className={receiptClasses.paper}>
           <Typography variant="h4" align="center">
             Toll Receipt
           </Typography>

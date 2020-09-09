@@ -31,7 +31,7 @@ export default function Index(props) {
             startIcon={<Receipt />}
             onClick={() => history.push("/toll-dashboard")}
           >
-            Check All Recipts
+            Check All Receipts
           </Button>
           <Button
             className={classes.button}

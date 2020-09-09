@@ -9,7 +9,7 @@ const receiptSchema = new mongoose.Schema(
     },
     toll_both_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "TollBoth",
+      ref: "TollBooth",
     },
     user_id: {
       type: mongoose.Schema.Types.ObjectId,

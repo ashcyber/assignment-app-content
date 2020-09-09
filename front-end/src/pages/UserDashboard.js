@@ -38,7 +38,7 @@ export default function UserDashboard() {
           className={classes.button}
           onClick={() => history.push("/check-out-toll")}
         >
-          Checkout Out Toll
+          Check Out Toll
         </Button>
         <Button
           variant="outlined"

@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 
 const Vehicle = require("../models/vechicle");
 const User = require("../models/user");
-const TollBoth = require("../models/tollBoth");
+const TollBooth = require("../models/tollBooth");
 const Receipt = require("../models/receipt");
 
 const user_id = mongoose.Types.ObjectId("5f57a821518d6346ec8be87b");
@@ -48,7 +48,7 @@ describe("User Routes", () => {
           Receipt.deleteMany({}),
           Vehicle.deleteMany({}),
           User.deleteMany({}),
-          TollBoth.deleteMany({}),
+          TollBooth.deleteMany({}),
         ]);
 
         await Vehicle.create({
@@ -81,7 +81,7 @@ describe("User Routes", () => {
           phone: "12390123",
         });
 
-        await TollBoth.create({
+        await TollBooth.create({
           _id: toll_both_id,
           name: "test_booth_name",
           location: "test_location",

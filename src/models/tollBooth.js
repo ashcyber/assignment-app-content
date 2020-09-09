@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const tollBoothSchema = new mongoose.Schema(
   {
-    tollboth_display_id: {
+    tollbooth_display_id: {
       type: String,
     },
     name: {
@@ -16,4 +16,4 @@ const tollBoothSchema = new mongoose.Schema(
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
 
-module.exports = mongoose.model("TollBoth", tollBoothSchema);
+module.exports = mongoose.model("TollBooth", tollBoothSchema);

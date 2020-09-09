@@ -1,10 +1,10 @@
-const TollBoth = require("../models/tollBoth");
+const TollBooth = require("../models/tollBooth");
 const Receipt = require("../models/receipt");
 
 const shortid = require("shortid");
 
 exports.createToll = async (req, res) => {
-  const toll = await TollBoth.create({
+  const toll = await TollBooth.create({
     display_id: shortid.generate(),
     name: req.body.name,
     location: req.body.location,
@@ -32,7 +32,7 @@ exports.checkHistory = async (req, res) => {
     },
     {
       $lookup: {
-        from: "tollboths",
+        from: "tollbooths",
         localField: "toll_both_id",
         foreignField: "_id",
         as: "toll_both_data",
